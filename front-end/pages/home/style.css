@@ -1,0 +1,221 @@
+body{
+    display: flex;
+    flex-direction: row;
+    margin:0;
+    padding: 0;
+    height: 100vh;
+}
+.div2{
+    background-color: #FBFBFB;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+.css-c
+{
+    background-color: black;
+    width: 62vw;
+    height:40vh;
+    margin: auto;
+    margin-top: 25vh;
+    margin-bottom: 22vh;
+    border-radius: 70px;
+    background: linear-gradient(
+        90deg,
+        #ff6b6b,   /* Red */
+        #ff8e72,   /* Coral */
+        #ffb84d,   /* Orange */
+        #ffdf5d,   /* Yellow */
+        #a3e635,   /* Lime Green */
+        #00c6a2,   /* Teal */
+        #00a3ff,   /* Sky Blue */
+        #7269ff,   /* Indigo */
+        #c56cf0,   /* Purple */
+        #ff8edb    /* Pink */
+      );
+    background-size: 300% 600%;
+    animation: spiral 10s infinite;
+    
+      
+}
+@keyframes spiral {
+    0%{
+        background-position: 0% 0%;
+    }
+    50%{
+        background-position: 200% 500%;
+    }
+    100%{
+        background-position: 0% 0%;
+    }
+}
+
+.card {
+    position: absolute;
+    width: 60vw;
+    height: 35vh;
+    border-radius: 50px;
+    display: flex;
+    background: #e0e0e0;
+    box-shadow: 20px 20px 60px #bebebe,
+                  -20px -20px 60px #ffffff;
+    margin: auto;
+    margin-top:2vh;
+    margin-left: 1vw;
+}
+.hclass{
+    text-transform: uppercase;
+    margin: auto;
+    font-size: 30vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: url("463829.jpg");
+    background-size: contain;
+}
+.nav-container{
+    display: flex;
+}
+.nav{
+    background-color: rgb(0, 139, 139);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    height:10vh;
+    width: 70vw;
+    margin:Auto;
+    border-radius: 10vh;
+    display: flex;
+    flex-direction: row;
+    padding: 1vh 2vw;
+    flex-wrap: wrap;
+    
+}
+.nav-icon{
+    width: 5vw;
+    height:80%;
+    background-size:contain;
+    background-repeat: no-repeat;
+    flex-grow: 1;
+    background-position: center;
+}
+.nav-icon:hover{
+    scale:1.1;
+}
+.nav-icon:active{
+    scale:1;
+}
+.user-icon{
+    background-image: url("user.png");
+}
+.course-icon{
+    background-image: url("computer.png");
+}
+.search-icon{
+    background-image: url("search.png");
+}
+
+/* From Uiverse.io by gagan-gv */ 
+.btn {
+    display: block;
+    padding: 0.7em 1em;
+    background: transparent;
+    outline: none;
+    border: 0;
+    color: #d4af37;
+    letter-spacing: 0.1em;
+    font-family: monospace;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .cube {
+    position: relative;
+    transition: all 0.5s;
+    flex-grow: 4;
+  }
+  
+  .cube .bg-top {
+    position: absolute;
+    height: 10px;
+    background: #d4af37;
+    bottom: 100%;
+    left: 5px;
+    right: -5px;
+    transform: skew(-45deg, 0);
+    margin: 0;
+    transition: all 0.4s;
+  }
+  
+  .cube .bg-top .bg-inner {
+    bottom: 0;
+  }
+  
+  .cube .bg {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    background: #d4af37;
+    transition: all 0.4s;
+  }
+  
+  .cube .bg-right {
+    position: absolute;
+    background: #d4af37;
+    top: -5px;
+    z-index: 0;
+    bottom: 5px;
+    width: 10px;
+    left: 100%;
+    transform: skew(0, -45deg);
+    transition: all 0.4s;
+  }
+  
+  .cube .bg-right .bg-inner {
+    left: 0;
+  }
+  
+  .cube .bg-inner {
+    background: #28282d;
+    position: absolute;
+    left: 2px;
+    right: 2px;
+    top: 2px;
+    bottom: 2px;
+  }
+  
+  .cube .text {
+    position: relative;
+    transition: all 0.4s;
+  }
+  
+  .cube:hover .bg-inner {
+    background: #d4af37;
+    transition: all 0.4s;
+  }
+  
+  .cube:hover .text {
+    color: #28282d;
+    transition: all 0.4s;
+  }
+  
+  .cube:hover .bg-right,
+  .cube:hover .bg,
+  .cube:hover .bg-top {
+    background: #28282d;
+  }
+  
+  .cube:active {
+    z-index: 9999;
+    animation: bounce 0.1s linear;
+  }
+  
+  @keyframes bounce {
+    50% {
+      transform: scale(0.9);
+    }
+  }
+  

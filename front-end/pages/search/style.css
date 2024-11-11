@@ -1,0 +1,300 @@
+body {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.div2 {
+    background-color: #FBFBFB;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.div3 {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    /*background-color: rgba(255, 0, 0, 0.5); /* Semi-transparent for visibility */
+    top: 0;
+    left: 0;
+    z-index: 5; /* Ensures .div3 overlays */
+}
+
+.nav-container {
+    display: flex;
+    position: absolute;
+    bottom: 5vh;
+    left: 15vw;
+    z-index: 10; /* Lower z-index to stay behind .div3 */
+}
+
+.nav {
+    background-color: rgb(0, 139, 139);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    height: 10vh;
+    width: 70vw;
+    margin: auto;
+    border-radius: 10vh;
+    display: flex;
+    flex-direction: row;
+    padding: 1vh 2vw;
+    flex-wrap: wrap;
+}
+
+.nav-icon {
+    width: 5vw;
+    height: 80%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    flex-grow: 1;
+    background-position: center;
+    border-radius: 20vh;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nav-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* For hover effect */
+    cursor: pointer;
+}
+
+.nav-icon:active {
+    transform: scale(1);
+}
+
+.user-icon {
+    background-image: url("user.png");
+}
+
+.course-icon {
+    background-image: url("computer.png");
+}
+
+.search-icon {
+    background-image: url("search.png");
+}
+
+.css-c
+{
+    background-color: black;
+    width: 62vw;
+    height:40vh;
+    margin: auto;
+    margin-top: 25vh;
+    margin-bottom: 22vh;
+    border-radius: 70px;
+    background: linear-gradient(
+        90deg,
+        #ff6b6b,   /* Red */
+        #ff8e72,   /* Coral */
+        #ffb84d,   /* Orange */
+        #ffdf5d,   /* Yellow */
+        #a3e635,   /* Lime Green */
+        #00c6a2,   /* Teal */
+        #00a3ff,   /* Sky Blue */
+        #7269ff,   /* Indigo */
+        #c56cf0,   /* Purple */
+        #ff8edb    /* Pink */
+      );
+    background-size: 300% 600%;
+    animation: spiral 10s infinite;
+    
+      
+}
+@keyframes spiral {
+    0%{
+        background-position: 0% 0%;
+    }
+    50%{
+        background-position: 200% 500%;
+    }
+    100%{
+        background-position: 0% 0%;
+    }
+}
+
+.card {
+    position: absolute;
+    width: 60vw;
+    height: 35vh;
+    border-radius: 50px;
+    display: flex;
+    background: #e0e0e0;
+    box-shadow: 20px 20px 60px #bebebe,
+                  -20px -20px 60px #ffffff;
+    margin: auto;
+    margin-top:2vh;
+    margin-left: 1vw;
+}
+.hclass{
+    text-transform: uppercase;
+    margin: auto;
+    font-size: 30vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: url("463829.jpg");
+    background-size: contain;
+}
+
+.div4{
+    display: flex;
+    height:100vh;
+    flex-direction: column;
+}
+
+.searchbar{
+    background-color: rgb(0, 139, 139);
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchBox {
+    display: flex;
+    width: 60vw;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    background: #2f3640;
+    border-radius: 50px;
+    position: relative;
+  }
+  
+  .searchButton {
+    color: white;
+    position: absolute;
+    right: 1.5vw;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--gradient-2, linear-gradient(90deg, #2AF598 0%, #009EFD 100%));
+    border: 0;
+    display: inline-block;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  }
+  /*hover effect*/
+  button:hover {
+    color: #fff;
+    background-color: #1A1A1A;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 10px 20px;
+    transform: translateY(-3px);
+  }
+  /*button pressing effect*/
+  button:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+  
+  .searchInput {
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    padding: 24px 46px 24px 26px;
+  }
+  
+  .card1 {
+    width: calc(25% - 1em); /* Adjust to 4 cards per row */
+    background: white;
+    padding: 0.4em;
+    flex-grow: 1;
+    border-radius: 6px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    max-height: 35vh;
+    max-width: 30vw;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+/* Add breakpoints to adjust the number of cards per row on smaller screens */
+@media (max-width: 1200px) {
+    .card1 {
+        width: calc(33.33% - 1em); /* 3 cards per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .card1 {
+        width: calc(50% - 1em); /* 2 cards per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .card1 {
+        width: 100%; /* 1 card per row */
+    }
+}
+  .card1:hover {
+    transform: scale(1.02); /* Slight zoom effect on hover */
+    cursor: pointer;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Slightly larger shadow on hover */
+}
+  .card1-image {
+    background: linear-gradient(
+        to bottom,
+        rgba(216, 14, 155, 0.7), /* Deep purple at the top */
+        rgba(49, 104, 255, 0.3) /* Lighter blue at the bottom */
+    );
+    width: 100%;
+    height: 130px;
+    border-radius: 6px 6px 0 0;
+  }
+  
+  .card1-image:hover {
+    transform: scale(0.98);
+  }
+  
+  .category {
+    text-transform: uppercase;
+    font-size: 0.7em;
+    font-weight: 600;
+    color: rgb(63, 121, 230);
+    padding: 10px 7px 0;
+  }
+  
+  .category:hover {
+    cursor: pointer;
+  }
+  
+  .heading {
+    font-weight: 600;
+    color: rgb(88, 87, 87);
+    padding: 7px;
+  }
+  
+  .heading:hover {
+    cursor: pointer;
+  }
+  
+  .author {
+    color: gray;
+    font-weight: 400;
+    font-size: 11px;
+    padding-top: 20px;
+  }
+  
+  .name {
+    font-weight: 600;
+  }
+  
+  .name:hover {
+    cursor: pointer;
+  }
+  .searchresult {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    padding: 1vw;
+    height: 85vh;
+    overflow-y: auto;
+    justify-content: space-evenly;
+
+}
